@@ -1,0 +1,71 @@
+#page-auth {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+}
+
+aside {
+    flex: 7;
+    
+    background: #835afd;
+    color: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 120px 88px;
+
+    img {
+        max-width: 328px;
+    }
+
+    strong {
+        font: 700 36px 'Poppins', sans-serif;
+        line-height: 42px;
+        margin-top: 16px;
+    }
+
+    p {
+        font-size: 24px;
+        line-height: 32px;
+        margin-top: 16px;
+        color: #f8f8f8;
+    }
+}
+
+main {
+    flex: 8;
+
+    padding: 0 32px; // Serve para quando for diminuir a tela, nunca grudar os cantos com a imagem, sempre ter um espaçamento.
+
+    display: flex;
+    align-items: center; // A imagem desce para o meio da tela
+    justify-content: center; // A imagem centraliza no meio da tela
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        align-items: stretch; // Imagens esticam para caber na largura total do align-items
+        text-align: center;
+
+        > img {
+            align-self: center; // Ao invés de ficar esticada como foi pedido no 'align-items', diminui o tamanho da imagem deixando mais centralizada com as tabelas. 
+        } // o sinal de > img indica que é para pegar apenas a imagem que está diretamente no .main-content (logo)
+
+        form {
+            input {
+                height: 50px; // altura para
+                border-radius: 8px;
+                padding: 0 16px;
+                background: #FFF;
+                border: 1px solid #a8a8b3
+
+            }
+        }
+    }
+
+}
+

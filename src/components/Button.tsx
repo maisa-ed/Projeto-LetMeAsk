@@ -1,18 +1,12 @@
-import { type } from "os";
-import { useState } from "react";
+import {ButtonHTMLAttributes} from 'react';
 
-function Button() {
-    // let it change - deixe mudar
-    const [counter, setCounter] = useState(0)
+import '../styles/button.scss';
 
-    function increment() {
-        setCounter (counter + 1);
-        console.log(counter)
-    }
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>
+
+export function Button(props: ButtonProps) {
     return (
-        <button onClick={increment}>{counter}</button>
-    )// sempre que usar uma propriedade dentro do HTML, tem que usar {}
-}
+        <button className = "button" {...props}/>
+    )
+ }
 
-
-export default Button;

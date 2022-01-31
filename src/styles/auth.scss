@@ -1,17 +1,17 @@
 #page-auth {
     display: flex;
-    align-items: stretch;
-    height: 100vh;
+    align-items: stretch; // Stretch vai fazer os itens do flexbox de estenderem por toda a tela vertical ( de cima pra baixo)
+    height: 100vh; // Altura
 }
 
 aside {
-    flex: 7;
+    flex: 7; // tamanho do aside
     
     background: #835afd;
     color: #FFF;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; //direção flexivel
     justify-content: center;
 
     padding: 120px 88px;
@@ -62,7 +62,68 @@ main {
                 padding: 0 16px;
                 background: #FFF;
                 border: 1px solid #a8a8b3
+            }
 
+            button {
+                margin-top: 16px;
+            }
+
+            button, input {
+                width: 100%; // Forçando que tem largura de 100% para dar espaçamento entre as tabelas
+            }
+        }
+
+        .create-room {
+            margin-top: 64px; // Distanciar da logo
+            height: 50px; // largura do botão 
+            border-radius: 8px; // Formato do botão (quadrado-redondo)
+            font-weight: 500; // Fonte grossa
+            background: #ea4335; // Cor do botão
+            color: #FFF; // Cor da frase "Crie sua sala com o Google"
+            display: flex; // centralização da frase (meio)
+            justify-content: center; // centralização da frase (esquerda-direita)
+            align-items: center; // centralização da frase (baixo-cima)
+
+            cursor: pointer; // Mouse aponta para o botão com a mãozinha
+            border: 0; // Com ou sem borda em volta do botão
+
+            transition: filter 0.2s; // Transição lenta do escuro
+
+            img {
+                margin-right: 8px; // divisão entre a frase e o 'G' do Google
+            }
+
+            // efeito de escurecer o botão para quando passar o mouse por cima 
+            &:hover {
+                filter: brightness(0.9);
+            }
+
+        }
+
+        .separator {
+            font-size: 14px;
+            color: #a8a8b3;
+
+            margin: 32px 0; // define uma área de margem nos 4 lados do elemento. Todas as margens individuais de uma só vez
+            display: flex;
+            align-items: center;
+
+            // before e after serve como uma linha com frase (mais apagada) para separar uma tabela de outra
+            &::before {
+                content: ''; // só pode ser usado com o before e after
+                flex: 1;
+                height: 1px;
+                background: #a8a8b3;
+                margin-right: 16px;
+
+            }
+
+            &::after {
+                content: '';
+                flex: 1;
+                height: 1px;
+                background: #a8a8b3;
+                margin-left: 16px;
             }
         }
     }
